@@ -674,6 +674,7 @@
 					"$(CONFIGURATION_BUILD_DIR)/usr/include/**",
 					"$(CONFIGURATION_BUILD_DIR)/usr/local/include/**",
 					/System/Library/Frameworks/System.framework/PrivateHeaders,
+					"$(PROJECT_DIR)/include/**",
 				);
 				INSTALL_PATH = /usr/lib;
 				ORDER_FILE = "$(PROJECT_DIR)/libobjc.order";
