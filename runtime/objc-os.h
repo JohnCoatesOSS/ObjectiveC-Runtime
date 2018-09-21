@@ -777,14 +777,13 @@ class mutex_tt : nocopy_t {
     void lock() {
         lockdebug_mutex_lock(this);
 
-        os_unfair_lock_lock_with_options_inline
-            (&mLock, OS_UNFAIR_LOCK_DATA_SYNCHRONIZATION);
+        os_unfair_lock_lock(&mLock);
     }
 
     void unlock() {
         lockdebug_mutex_unlock(this);
 
-        os_unfair_lock_unlock_inline(&mLock);
+        os_unfair_lock_unlock(&mLock);
     }
 
     void forceReset() {
